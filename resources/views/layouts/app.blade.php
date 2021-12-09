@@ -37,9 +37,9 @@
                       <nav class="navegacion container-fluid " id="navbarmenu">
                           <ul class="menu">
                               <li class="col-md-12 col-sm-12">
-                                  <a href="/nosotros">
+                                  <a href="{{ asset('/inicio')}}    ">
                                       <img src="{{ asset('images/buttons/black_home.jpg') }}" alt="" class="imagen">
-                                      <span class="text-item">Nosotros</span>
+                                      <span class="text-item">Inicio</span>
                                       <span class="down-item"></span>
                                   </a>
                               </li>

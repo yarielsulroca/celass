@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Curso;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
-class CursoController extends Controller
+class UsuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class CursoController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -24,7 +25,7 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.register');
     }
 
     /**
@@ -35,25 +36,18 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        //incrementar Id automaticamente
-        $cursos_temp= Curso::all();
-        $curso_last= $cursos_temp->last();
-        $new_id= $curso_last->id + 1;
-        //Crea Nuevo Curso
-        $new_curso = new Curso();
-        $new_curso->id = $new_id;
-        $new_curso->titulo= $request->get('titulo');
-        $new_curso->descripcion= $request->get('descripcion');
-        $new_curso->img= $request->get('img');
-        $new_curso->user_id= $request->get('user_id');
-        $new_curso->fecha_inicio= $request->get('fecha_inicio');
-        $new_curso->fecha_fin= $request->get('fecha_fin');
-        //El nuevo curso siempre tendra como valor inicial (1)=True; o sea activo Inactivo=(0)->falce
-        $new_curso->activo= 1;
-        $new_curso->url= $request->get('url');
-        //Guardo los datos del nuevo curso en la bace de datos Usando el metodo save()
-        $new_curso->save();
-        return redirect('/admin');
+         //incrementar Id automaticamente
+         $user_temp= User::all();
+         $user_last= $user_temp->last();
+         $user_id= $user_last->id + 1;
+         // Creando Nuevo User
+         $new_user= new User();
+         $new_user->id= $user_id;
+         $new_user->name= $request->get('name');
+         $new_user->email= $request->get('email');
+         $new_user->password= bcrypt($request->password);
+         $new_user->save();
+         return redirect('/home');
     }
 
     /**

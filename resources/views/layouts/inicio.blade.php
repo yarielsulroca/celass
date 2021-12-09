@@ -51,36 +51,43 @@
           </div>
 <!-- /ENLACES -->
         <!-- CURSOS -->
-          <div class="col-sm-8 col-lg-8 col-xl-8">
-        <table class="table table-bordered ">
-            <tr>
-                <td class="table-bordered">
-                    <!-- Recorre Todos los curos -->
-                    @foreach ($cursos as $curso)
-                        <div class="" style="background #dadada;">
-                                <h2>{{ $curso->titulo }}</h2>
-                                <h5>Inicio del Curso: {{$curso->fecha_inicio}} Activo hasta: {{$curso->fecha_fin}} </h5>
-                                <div class="fakeimg">{{$curso->img}}</div>
-                                <h6>Metodologo Principal:{{ $curso->user->name }}</h6>
-                                <h6>Correo Del Metodologo: {{$curso->user->email}}</h6>
-                                <p>{{ $curso->descripcion }}</p>
-                                <a href="{{ $curso->url }}" style="color:blue;font-size="20px; >URL....click Aqui</a>
-                                <br><br>
-                                <!-- Este es para Colorear segun el estado Iniciado, En curso, Finalizado -->
-                                @if ($curso->fecha_fin < $fecha2=date('Y-m-d' ))
-                                    <h4 class="table-danger col-sm-3">Finalizado</h4>
+          <div class="col-lg-auto col-md-auto col-sm-auto" >
+              <i class="icon-login"></i>
+            <h2 name="servicios" id="servicios">Cursos Online</h2>
+            @foreach ($cursos as $curso)
+            <div class="card mb-8 " style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{{ $curso->img }}" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3 class="card-title">{{ $curso->titulo }}</h3>
+                            <h6>Fecha: {{ $curso->fecha_inicio }} hasta {{ $curso->fecha_fin }}</h6>
+                            <p class="card-text">{{ $curso->descripcion }}.</p>
+
+                            <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Metodologo Principal:{{ $curso->user->name }}/li>
+                            <li class="list-group-item">Correo Del Metodologo: {{$curso->user->email}}</li>
+                            </ul>
+
+                            <a href="{{ $curso->url }}" class="btn btn-primary">Curso</a>
+                            <li class="list-group list-group-item"></li>
+                            <!-- Este es para Colorear segun el estado Iniciado, En curso, Finalizado -->
+                            @if ($curso->fecha_fin < $fecha2=date('Y-m-d' ))
+                                <li class="table-danger col-5">Finalizado</li>
                                         @elseif ( $curso->fecha_inicio >= $fecha2=date('Y-m-d' ))
-                                            <h4 class="table-warning col-sm-3">No Iniciado</h4>
-                                            @else
-                                                <h4 class="table-success col-sm-3">En Curso</h4>
-                                @endif
-                                <!-- Fin Coloreado de estado -->
+                                            <li class="table-warning col-5">No Iniciado</li>
+                                                @else
+                                                 <li class="table-success col-5">En Curso</li>
+                            @endif
+                            <!-- Fin Coloreado de estado -->
+
                         </div>
-                    @endforeach
-                    <!-- FIn recorrico de cursos -->
-                </td>
-            </tr>
-        </table>
+                    </div>
+                </div>
+            </div>
+        @endforeach
 
          <!-- CURSOS -->
         </div>
