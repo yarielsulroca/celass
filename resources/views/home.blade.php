@@ -1,7 +1,28 @@
-@extends('layouts.app')
-@section('title',"ADMINISTRACION")
-@section('content')
-<div class="container">
+<html>
+    <head>
+        <title>CELASS - @yield('title')</title>
+        <!-- MIS CSS-->
+        <link href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+
+        <!-- CORE CSS -->
+        <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/fonts/glyphicons.woff2')}}" rel="stylesheet" type="text/css" />
+
+        <!-- THEME CSS -->
+        <link href="{{asset('css/essentials.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/layout.css')}}" rel="stylesheet" type="text/css" />
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <link href="{{asset('css/header-1.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/blue.css')}}" rel="stylesheet" type="text/css" id="color_scheme" />
+
+        <!-- REVOLUTION SLIDER -->
+        <link href="{{asset('css/extralayers.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/settings.css')}}" rel="stylesheet" type="text/css" />
+        <!-- /MIS CCSS -->
+    </head>
+    <body>
+    <div class="container">
     <div class="row justify-content-center">
         <div class="container">
             <a href="logout" class="btn btn-amber">Salir</a>
@@ -16,7 +37,7 @@
                     @endif
                  </div>
                  <h2 class="text-center" style="color: blue "> Administrar Usuarios</h3>
-                 <a href="/usuarios/create" class="btn btn-outline-info col-2">Nuevo <i class="icon-plus-sign"></i></a>
+                 <a href="/usuarios/create" class="btn">Nuevo <i class="icon-plus-sign"></i></a>
                   <!-- Tabla Usuarios -->
                  <div class="justify-content-center ">
                     <table class="table table-bordered table-responsive justify-content-center col-auto">
@@ -29,7 +50,7 @@
                                 <th>Editar/Borrar</th>
                             </tr>
                         </thead>
-                        <tbody class="table-bordered table-primary ">
+                        <tbody class="table-borderless table-primary">
                             @foreach ($usuarios as $usuario )
                                 <tr>
                                     <th>{{$usuario->id}}</th>
@@ -85,7 +106,7 @@
                                     <th>Inactivo</th>
                                 @endif
                                 <th>{{ $curso->url }}</th>
-                                <th>{{ $curso->img }}</th>
+                                <th><img src="{{ asset($curso->img) }}" alt=""></th>
                                 <th>
                                     <form action="{{ route('cursos.destroy',$curso->id) }}" method="POST">
                                         <a href="/estudiantes/{{$curso->id}}/edit" class="btn btn-info"><i class="icon-edit"></i></a>
@@ -104,5 +125,16 @@
         </div>
     </div>
 </div>
+<!-- Scripts -->
+<script type="text/javascript" src="{{ asset('js/jquery/jquery-2.1.4.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/scripts.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/styleswitcher/styleswitcher.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/slider.revolution/js/jquery.themepunch.tools.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/slider.revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/view/demo.revolution_slider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+<!-- /Scripts -->
+    </body>
 
-@endsection
+</html>
+

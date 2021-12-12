@@ -19,11 +19,13 @@ class CreateCursosTable extends Migration
             $table->longText('descripcion');
             $table->binary('img')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('tipo_id')->nullable();
             $table->date('fecha_inicio');
             $table->date('fecha_fin')->nullable();
             $table->boolean('activo');
             $table->string('url');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
+            $table->foreign('tipo_id')->references('id')->on('tipos_cursos')->onDelete('set null');
             $table->timestamps();
         });
     }

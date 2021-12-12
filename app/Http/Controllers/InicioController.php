@@ -9,8 +9,8 @@ class InicioController extends Controller
     //metodo index para ir al index del Inicio
     public function index()
     {
-        $cursos= Curso::orderBy('fecha_inicio','desc')->get();
-       return view('layouts.inicio')->with('cursos',$cursos);
+        $curso= Curso::find(1);
+       return view('home.index')->with('curso',$curso);
     }
     public function nosotros()
     {
