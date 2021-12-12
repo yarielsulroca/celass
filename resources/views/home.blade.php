@@ -57,8 +57,8 @@
                                     <th>{{$usuario->name}}</th>
                                     <th>{{$usuario->email}}</th>
                                     <th>
-                                        <form action="{{ route('cursos.destroy',$usuario->id) }}" method="POST" class="col-2">
-                                            <a href="/estudiantes/{{$usuario->id}}/edit" class="btn btn-info"><i class="icon-edit"></i></a>
+                                        <form action="{{ route('usuarios.destroy',$usuario->id) }}" method="POST" class="col-2">
+                                            <a href="/usuarios/{{$usuario->id}}/edit" class="btn btn-info"><i class="icon-edit"></i></a>
                                                 @csrf
                                                 @method('DELETE')
                                             <button type="submit" class="btn btn-danger"><i class="icon-trash"></i></button>
@@ -82,6 +82,7 @@
                             <th>ID</th>
                             <th>Título</th>
                             <th>Descripción</th>
+                            <th>Tipo_Curso</th>
                             <th>Metodologo</th>
                             <th>Fecha_Inicio</th>
                             <th>Fecha_Fin</th>
@@ -97,6 +98,7 @@
                                 <th>{{ $curso->id }}</th>
                                 <th>{{ $curso->titulo }}</th>
                                 <th>{{ $curso->descripcion }}</th>
+                                <th>{{ $curso->tipoCurso->tipo }}</th>
                                 <th>{{ $curso->user->name }}</th>
                                 <th>{{ $curso->fecha_inicio }}</th>
                                 <th>{{ $curso->fecha_fin }}</th>
@@ -106,10 +108,11 @@
                                     <th>Inactivo</th>
                                 @endif
                                 <th>{{ $curso->url }}</th>
-                                <th><img src="{{ asset($curso->img) }}" alt=""></th>
+
+                                <th><img src="{{ asset($curso->img) }}" class="rounded mx-auto d-block" alt="..."></th>
                                 <th>
                                     <form action="{{ route('cursos.destroy',$curso->id) }}" method="POST">
-                                        <a href="/estudiantes/{{$curso->id}}/edit" class="btn btn-info"><i class="icon-edit"></i></a>
+                                        <a href="{{ route('cursos.edit',$curso->id) }}" class="btn btn-info"><i class="icon-edit"></i></a>
                                             @csrf
                                             @method('DELETE')
                                         <button type="submit" class="btn btn-danger"><i class="icon-trash"></i></button>

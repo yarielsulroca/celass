@@ -332,7 +332,7 @@
 
                     <div class="text-center">
                         <h1 class="nomargin-bottom" style="color: white;"> Cursos vigentes por nuestro Centro:</h1>
-                        <h2 class="col-sm-10 col-sm-offset-1 nomargin-bottom weight-300 text-muted size-20" style="color: rgb(104, 6, 6)">Usted puede disfrutar de los siguientes cursos</h2>
+                        <h2 class="col-sm-10 col-sm-offset-1 nomargin-bottom weight-300 text-muted size-20" style="color: rgb(255, 255, 255)">Usted puede disfrutar de los siguientes cursos</h2>
                     </div>
 
                 </div>
@@ -344,45 +344,57 @@
                 <div class="container">
 
                     <div id="portfolio" class="portfolio-nogutter">
+                         <div class="col-md-9 col-sm-9">
+                             <table class="table table-responsive justify-content-center col-auto">
+                                @foreach ($cursos as $curso )
+                                 <th class= "col-3">
+                                    <div class="row mix-grid">
+                                        @if($curso->tipo_id > 6)
+                                                    <div class="col-md-3 col-sm-3 mix development" style="background: white;"><!-- item -->
+                                                    @else
+                                                    <div class="col-md-3 col-sm-3 mix photography" style="background: white;"><!-- item -->
+                                                    @endif
+                                                        <div class="item-box">
+                                                            <figure>
+                                                                <span class="item-hover">
+                                                                    <span class="overlay dark-5"></span>
+                                                                        <span class="inner">
+                                                                            <!-- details -->
+                                                                            <a class="ico-rounded" href="#">
+                                                                                <span class="fa fa-align-justify size-20"></span>
+                                                                            </a>
 
-                                                                <div class="col-md-9 col-sm-9">
+                                                                        </span>
+                                                                </span>
+                                                                    <img class="img-responsive" src="{{asset($curso->img)}}" width="600" height="399" alt="">
+                                                            </figure>
 
-                                                                    <div class="row mix-grid">
-                                                                    @if($curso->tipo_id > 6)
-                                                                                <div class="col-md-3 col-sm-3 mix development" style="background: white;"><!-- item -->
-                                                                                @else
-                                                                                <div class="col-md-3 col-sm-3 mix photography" style="background: white;"><!-- item -->
-                                                                                @endif
-                                                                                    <div class="item-box">
-                                                                                        <figure>
-                                                                                            <span class="item-hover">
-                                                                                                <span class="overlay dark-5"></span>
-                                                                                                    <span class="inner">
-                                                                                                        <!-- details -->
-                                                                                                        <a class="ico-rounded" href="#">
-                                                                                                            <span class="fa fa-align-justify size-20"></span>
-                                                                                                        </a>
+                                                            <div class="item-box-desc">
+                                                                <h2 style="color: rgb(235, 75, 75)">{{$curso->tipoCurso->tipo }}</h6>
+                                                                    <br>
+                                                                <h4>{{$curso->titulo }}</h3>
+                                                                <h6>Metodólogo:{{$curso->user->name}}</h6>
+                                                                <h6>Correo_Electrónico:{{$curso->user->email}}</h6>
+                                                                <ul class="list-inline categories nomargin">
+                                                                    <li><p style="color: black">{{$curso->descripcion}}</p></li>
+                                                                </ul>
+                                                                <ul class="list-inline categories nomargin">
+                                                                    <li><a href="{{$curso->url}}" style="color: rgb(107, 0, 139)">Ir al Curso</a></li>
+                                                                </ul>
+                                                            </div>
 
-                                                                                                    </span>
-                                                                                            </span>
-                                                                                                <img class="img-responsive" src="{{asset('images/img_cursos/oficces.jpg')}}" width="600" height="399" alt="">
-                                                                                        </figure>
+                                                        </div>
 
-                                                                                        <div class="item-box-desc">
-                                                                                            <h2 style="color: brown">{{$curso->tipoCurso->tipo }}</h6>
-                                                                                                <br>
-                                                                                            <h4>{{$curso->titulo }}</h3>
-                                                                                            <ul class="list-inline categories nomargin">
-                                                                                                <li><p style="color: black">{{$curso->descripcion}}</p></li>
-                                                                                            </ul>
-                                                                                            <ul class="list-inline categories nomargin">
-                                                                                                <li><a href="{{$curso->url}}" style="color: darkblue">Ir al Curso</a></li>
-                                                                                            </ul>
-                                                                                        </div>
+                                                    </div><!-- /item -->
+                                                    <br>
 
-                                                                                    </div>
+                                 </th>
+                                 @endforeach
+                             </table>
 
-                                                                                </div><!-- /item -->
+
+
+
                             </div>
 
                         </div>

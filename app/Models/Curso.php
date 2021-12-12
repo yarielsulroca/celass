@@ -35,5 +35,5 @@ class Curso extends Model
     {
     return $this->belongsTo('App\Models\TipoCurso','tipo_id');
     }
-
+    
 }

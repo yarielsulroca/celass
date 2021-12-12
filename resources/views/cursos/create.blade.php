@@ -48,6 +48,9 @@
     <div class="custom-file">
         <label for="" class="form-label">Imagen Del Curso</label>
         <input type="file" name="img" class="custom-file-input" id="img"  >
+            @error('img')
+            <small class="text-danger" >{{ $message }}</small>
+            @enderror
         <label class="custom-file-label" for="img"></label>
     </div>
 <br><br><br>
