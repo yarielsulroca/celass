@@ -45,7 +45,7 @@ class UsuarioController extends Controller
          $new_user->id= $user_id;
          $new_user->name= $request->get('name');
          $new_user->email= $request->get('email');
-         $new_user->password= bcrypt($request->password);
+         $new_user->password= bcrypt($request->get('password'));
          $new_user->save();
          return redirect('/home');
     }
@@ -58,7 +58,8 @@ class UsuarioController extends Controller
      */
     public function show($id)
     {
-        //
+       $user= User::find($id);
+       return view('usuarios.show');
     }
 
     /**
@@ -69,7 +70,8 @@ class UsuarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user= User::find($id);
+        return view('usuarios.edit')->with('user',$user);
     }
 
     /**
@@ -81,7 +83,12 @@ class UsuarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user= User::find($id);
+        $user->name= $request->get('name');
+        $user->email= $request->get('email');
+        $user->password= bcrypt($request->get('password'));
+        $user->save();
+        return redirect('/home');
     }
 
     /**
@@ -92,6 +99,8 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user= User::find($id);
+        $user->delete();
+        return redirect('/home');
     }
 }
