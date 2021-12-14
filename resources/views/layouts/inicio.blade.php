@@ -54,37 +54,19 @@
           <div class="col-lg-auto col-md-auto col-sm-auto" >
               <i class="icon-login"></i>
             <h2 name="servicios" id="servicios">Cursos Online</h2>
-            @foreach ($cursos as $curso)
-            <div class="card mb-8 " style="max-width: 540px;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ $curso->img }}" class="img-fluid rounded-start" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h3 class="card-title">{{ $curso->titulo }}</h3>
-                            <h6>Fecha: {{ $curso->fecha_inicio }} hasta {{ $curso->fecha_fin }}</h6>
-                            <p class="card-text">{{ $curso->descripcion }}.</p>
 
-                            <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Metodologo Principal:{{ $curso->user->name }}/li>
-                            <li class="list-group-item">Correo Del Metodologo: {{$curso->user->email}}</li>
-                            </ul>
-
-                            <a href="{{ $curso->url }}" class="btn btn-primary">Curso</a>
-                            <li class="list-group list-group-item"></li>
-                            <!-- Este es para Colorear segun el estado Iniciado, En curso, Finalizado -->
-                            @if ($curso->fecha_fin < $fecha2=date('Y-m-d' ))
-                                <li class="table-danger col-5">Finalizado</li>
-                                        @elseif ( $curso->fecha_inicio >= $fecha2=date('Y-m-d' ))
-                                            <li class="table-warning col-5">No Iniciado</li>
-                                                @else
-                                                 <li class="table-success col-5">En Curso</li>
-                            @endif
-                            <!-- Fin Coloreado de estado -->
-
-                        </div>
-                    </div>
+            <div class="card-group">
+                @foreach ($cursos as $curso)
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ $curso->tipoCurso->tipo }}</h5>
+                    <h6 class="card-title">{{ $curso->titulo }}</h6>
+                    <p class="card-text">{{ $curso->descripcion }}.</p>
+                  </div>
+                  <div class="card-footer">
+                    <small class="text-muted"><a href="{{ $curso->url }}">Ir al Curso</a></small>
+                  </div>
                 </div>
             </div>
         @endforeach

@@ -17,6 +17,7 @@ Route::get('/nosotros', [App\Http\Controllers\InicioController::class, 'nosotros
 Route::get('/servicios', [App\Http\Controllers\InicioController::class, 'servicios'])->name('servicios');
 Route::get('/descargas', [App\Http\Controllers\InicioController::class, 'descargas'])->name('descargas');
 Route::get('/contacto', [App\Http\Controllers\InicioController::class, 'contacto'])->name('contacto');
+Route::get('/pruebas',[App\Http\Controllers\InicioController::class, 'pruebas'])->name('pruebas');
 
 // Rutas autenticables
 Auth::routes();
@@ -24,3 +25,4 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('cursos', CursoController::class);
 Route::resource('usuarios', UsuarioController::class);
+

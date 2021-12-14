@@ -31,4 +31,9 @@ class InicioController extends Controller
         //return "Estoy en la vista Contactos";
         return view('layouts.contacto');
     }
+    public function pruebas()
+    {
+        $cursos= Curso::all();
+        return view('cursos.show')->with('cursos',$cursos);
+    }
 }
