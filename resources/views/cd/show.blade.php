@@ -8,7 +8,8 @@
     <body>
         <div class="container">
             <section class="wrapper">
-            <div class=" ">
+            @foreach ($cursos as $curso )
+            <div class="row">
                <div class="col-md-4">
                    <div class="card text-white card-has-bg click-col">
                        <img class="card-img d-none" src="{{ $curso->img }}" alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
@@ -26,7 +27,8 @@
                 <div class="media-body">
                   <h6 class="my-0 text-white d-block"> Metodólogo: {{ $curso->user->name }}</h6>
                 </div>
-            </div>
+                </div>
+                @endforeach
             </section>
         </div>
 
