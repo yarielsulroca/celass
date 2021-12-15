@@ -36,38 +36,31 @@
 
 <!-- wrapper -->
 <div id="wrapper">
-    <div id="header" class="sticky shadow-after-3 clearfix" style="background-image: url({{ asset('images/backgrounds/azul4.jpg') }})">
+    <div id="header" class="sticky header-sm clearfix">
 
         <!-- TOP NAV -->
         <header id="topNav">
-            <div class="container" style="background-color:"color:antiquewhite">
+            <div class="container">
 
                 <!-- Logo -->
-                <a class="logo pull-left" href="/inicio">
-                    <img src="{{asset('images/buttons/logo.jpg')}}" alt="" />
+                <a class="logo pull-left" href="index.html">
+                    <img src="{{asset('images/logo.jpg')}}" alt="" />
                 </a>
 
                 <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
                     <nav class="nav-main">
 
                         <ul id="topMain" class="nav nav-pills nav-main">
-                            <li class="dropdown active"><!-- HOME -->
-                                <a class="dropdown" href="/inicio" style="color:antiquewhite; font-size: 20px;">
-                                    Inicio
+                            <li class="dropdown"><!-- HOME -->
+                                <a class="dropdown text-red weight-800" href="/inicio">
+                                    INICIO
                                 </a>
                             </li>
-                            <li class="dropdown"><!-- PAGES -->
-                                <a class="dropdown" href="#" style="color:antiquewhite; font-size: 20px;">
-                                    Contacto
+                            <li class="dropdown" id="contact">
+                                <a class="dropdown text-red weight-800" href="#">
+                                    CONTACTO
                                 </a>
                             </li>
-
-                            <li class="dropdown mega-menu"><!-- SHORTCODES -->
-                                <a class="dropdown" href="#" style="color:antiquewhite; font-size: 20px;">
-                                   Conocenos
-                                </a>
-                            </li>
-
                         </ul>
 
                     </nav>
@@ -79,7 +72,7 @@
 
     </div>
 
-    <!-- REVOLUTION SLIDER -->
+     <!-- REVOLUTION SLIDER -->
     <section id="slider" class="slider fullwidthbanner-container roundedcorners">
 
         <div class="fullwidthbanner" data-height="550" data-navigationStyle="">
@@ -140,24 +133,6 @@
                         Fabulas definitiones ei pri per recteque hendrerit scriptorem in errem scribentur mel fastidii propriae philosophia cu mea.
                     </div>
 
-                    <div class="tp-caption customin ltl tp-resizeme"
-                         data-x="center"
-                         data-y="313"
-                         data-customin="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                         data-speed="800"
-                         data-start="1550"
-                         data-easing="easeOutQuad"
-                         data-splitin="none"
-                         data-splitout="none"
-                         data-elementdelay="0.01"
-                         data-endelementdelay="0.1"
-                         data-endspeed="1000"
-                         data-endeasing="Power4.easeIn" style="z-index: 10;">
-                        <a href="#purchase" class="btn btn-default btn-lg">
-                            <span>Conócenos</span>
-                        </a>
-                    </div>
-
                 </li>
 
                 <li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
@@ -165,16 +140,9 @@
                     <!-- COVER IMAGE -->
                     <img src=" {{ asset('images/Celass/c4.jpg') }} " data-lazyload="{{ asset('images/Celass/c4.jpg') }}" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
-                    <div class="tp-caption lft boxshadow"
-                         data-x="70"
-                         data-y="90"
-                         data-speed="900"
-                         data-start="500"
-                         data-easing="easeOutBack">
-                    </div>
 
                     <div class="tp-caption sft large_bold_white"
-                         data-x="750"
+                         data-x="75"
                          data-y="85"
                          data-speed="300"
                          data-start="1200"
@@ -182,7 +150,7 @@
                     </div>
 
                     <div class="tp-caption lfb medium_light_white"
-                         data-x="750"
+                         data-x="75"
                          data-y="200"
                          data-speed="300"
                          data-start="1400"
@@ -190,36 +158,18 @@
                     </div>
 
                     <div class="tp-caption lfb medium_light_white"
-                         data-x="750"
+                         data-x="75"
                          data-y="234"
                          data-speed="300"
                          data-start="1700"
                          data-easing="easeOutExpo">con carácter nacional e internacional <span class="line-through"></span>
                     </div>
 
-                    <div class="tp-caption lfb"
-                         data-x="751"
-                         data-y="370"
-                         data-speed="300"
-                         data-start="2400"
-                         data-easing="easeOutExpo">
-                        <a href="#purchase" class="btn btn-default btn-lg">
-                            <span>Servicios</span>
-                        </a>
-                    </div>
 
                 </li><li data-transition="fade" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
                     <!-- COVER IMAGE -->
                     <img src=" {{ asset('images/Celass/c3.jpg') }} " data-lazyload="{{ asset('images/Celass/c3.jpg') }}" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
-
-                    <div class="tp-caption lft boxshadow"
-                         data-x="70"
-                         data-y="90"
-                         data-speed="900"
-                         data-start="500"
-                         data-easing="easeOutBack">
-                    </div>
 
                     <div class="tp-caption sft large_bold_white"
                          data-x="750"
@@ -230,7 +180,7 @@
                     </div>
 
                     <div class="tp-caption lfb medium_light_white"
-                         data-x="750"
+                         data-x="150"
                          data-y="200"
                          data-speed="300"
                          data-start="1400"
@@ -238,7 +188,7 @@
                     </div>
 
                     <div class="tp-caption lfb medium_light_white"
-                         data-x="750"
+                         data-x="150"
                          data-y="234"
                          data-speed="300"
                          data-start="1700"
@@ -246,7 +196,7 @@
                     </div>
 
                     <div class="tp-caption lfb medium_light_white"
-                         data-x="750"
+                         data-x="150"
                          data-y="274"
                          data-speed="300"
                          data-start="2000"
@@ -254,23 +204,13 @@
                     </div>
 
                     <div class="tp-caption lfb medium_light_white"
-                    data-x="750"
+                    data-x="150"
                     data-y="314"
                     data-speed="300"
                     data-start="2300"
                     data-easing="easeOutExpo">atraves correos electrónicos u otras vías
                     </div>
 
-                    <div class="tp-caption lfb"
-                         data-x="751"
-                         data-y="370"
-                         data-speed="300"
-                         data-start="2400"
-                         data-easing="easeOutExpo">
-                        <a href="#purchase" class="btn btn-default btn-lg">
-                            <span>Servicios</span>
-                        </a>
-                    </div>
 
                 </li>
 
@@ -280,20 +220,61 @@
     </section>
     <!-- /REVOLUTION SLIDER -->
 
+
     <!-- WELCOME -->
     <section class="nopadding-bottom">
         <div class="" style="background-image: url({{ asset('images/backgrounds/azul4.jpg') }})">
             <header class="text-center margin-bottom-40">
-                <h1 class="weight-300" style ="color:antiquewhite">Bienvenido a CELASS</h1>
-                <h2 class="weight-300 letter-spacing-1 size-13" ><span style="color:aqua">Centro de Estudios Laborales y de Seguridad Social</span></h2>
+                <h1 class="weight-300 text-red">Bienvenido a CELASS</h1>
+                <h2 class="weight-300 letter-spacing-1 size-13" ><span >Centro de Estudios Laborales y de Seguridad Social</span></h2>
             </header>
 
             <div class="text-center">
-                <p class="lead" style="color:antiquewhite">
+                <p class="lead">
                    Somos una escuela ramal del ministerio del trabajo y seguridad social...
                 </p>
-
             </div>
+
+            <!-- FEATURED BOXES 3 -->
+            <div class="row margin-bottom-30">
+
+                <div class="col-md-offset-1 col-md-2 col-xs-6">
+                    <div class="text-center">
+                        <i class="ico-color text-red bg-white ico-lg ico-rounded ico-hover et-circle-compass"></i>
+                        <br/>
+                        <button type="button" class="btn btn-default bg-blue border-blue" data-toggle="tooltip" data-placement="bottom" title="Servicios científico-técnicos y consultorías que responden a necesidades del sector, mediante atención personalizada en el centro de información, correos electrónicos u otras vías.">Nombre servicio</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <div class="text-center">
+                        <i class="ico-color text-red bg-white ico-lg ico-rounded ico-hover et-tools"></i>
+                        <br/>
+                        <button type="button" class="btn btn-default bg-blue border-blue" data-toggle="tooltip" data-placement="bottom" title="Acciones de capacitación, superación profesional y formación académica de posgrado, con carácter nacional e internacional en correspondencia con las necesidades diagnosticadas a los directivos, reservas, expertos y especialistas del Ministerio y sus entidades adscriptas y subordinadas; así como de las direcciones de Trabajo provinciales y municipales, OSDE y OAS.">Nombre servicio</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <div class="text-center">
+                        <i class="ico-color text-red bg-white ico-lg ico-rounded ico-hover et-strategy"></i>
+                        <br/>
+                        <button type="button" class="btn btn-default bg-blue border-blue" data-toggle="tooltip" data-placement="bottom" title="Asesoramiento en materias de programas para el mejoramiento del desempeño laboral de los cuadros, reservas y trabajadores en general.">Nombre servicio</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <div class="text-center">
+                        <i class="ico-color text-red bg-white ico-lg ico-rounded ico-hover et-streetsign"></i>
+                        <br/>
+                        <button type="button" class="btn btn-default bg-blue border-blue" data-toggle="tooltip" data-placement="bottom" title="Actualización de CD en materia de legislación laboral, salarial y de trabajo social.">Nombre servicio</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-6">
+                    <div class="text-center">
+                        <i class="ico-color text-red bg-white ico-lg ico-rounded ico-hover et-trophy"></i>
+                        <br/>
+                        <button type="button" class="btn btn-default bg-blue border-blue" data-toggle="tooltip" data-placement="bottom" title="Asesoramiento y cooperación para el desarrollo de, jornadas y eventos científicos metodológicos, propios del sistema trabajo, que tributen al fortalecimiento del diseño o propuestas de políticas del ámbito laboral y de lo social.">Nombre servicio</button>
+                    </div>
+                </div>
+            </div>
+            <!-- /FEATURED BOXES 3 -->
         </div>
     </section>
     <!-- /WELCOME -->
@@ -302,7 +283,7 @@
     <section class="info-bar info-bar-clean">
         <div class="container">
 
-            <div id="portfolio" class="portfolio-nogutter">
+            <!--div id="portfolio" class="portfolio-nogutter">
 
                 <ul class="nav nav-pills mix-filter margin-bottom-60">
                     <li data-filter="all" class="filter active"><a href="#">All</a></li>
@@ -310,23 +291,38 @@
                     <li data-filter="photography" class="filter"><a href="#">Photography</a></li>
                     <li data-filter="design" class="filter"><a href="#">Design</a></li>
                 </ul>
-            </div>
+            </div-->
 
-            <header class="text-center">
-                <h1>CURSOS <span style="color:#3ce753">On Line</span></h1>
-            </header>
-
-
-            <div class="row">
+            <div class="row margin-top-30">
+                <header class="text-center">
+                    <h1 style="font-size: 28px">CURSOS <span class="text-blue">On Line</span></h1>
+                </header>
                 @foreach ($cursos as $curso)
-                <div class="col-sm-4">
-                    <i><img class="wow fadeIn tada" src="{{ $curso->img }}"  data-wow-delay="0.4s" alt="" style="width:25%;"></i><br><br><br>
-                    <i><img src="{{ asset('images/buttons/curso.jpg') }}" alt=""></i>
-                    <h2 class="text-blue">{{ $curso->tipoCurso->tipo }}</h2>
-                    <h3 class="text-danger">{{ $curso->titulo }}</h3>
-                    <h3 class="text-success">{{ $curso->fecha_inicio }} hasta: {{ $curso->fecha_fin }}</h3>
-                    <p>{{ $curso->descripcion}}</p>
-                    <a href="{{ $curso->url }}">Ir al Curso</a>
+                <div class="col-sm-3">
+                    <div>
+                        <figure class="box-shadow-7">
+                            <img class="img-responsive height-200" src="{{$curso->img}}">
+                        </figure>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="box-shadow-6">
+                                <img class="img-responsive pull-left" src="{{ asset('images/buttons/curso.jpg') }}" width="50" height="50" />
+                            </figure>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="text-blue" style="font-size: 18px">{{ $curso->tipoCurso->tipo }}</div>
+                            <div class="text-danger">{{ $curso->titulo }}</div>
+                            <div class="">
+                                Fecha:
+                                <p class="text-green">{{ $curso->fecha_inicio }} / {{ $curso->fecha_fin }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        {!! Str::limit("$curso->descripcion", 90, ' ...') !!}
+                        <p class="text-right"><a href="{{ $curso->url }}">Ir al curso</a></p>
+                    </div>
                 </div>
                 @endforeach
             </div>
@@ -334,9 +330,6 @@
         </div>
     </section>
     <!-- /CURSOs-->
-
-
-
 
     <!-- PARALLAX -->
     <section class="parallax parallax-2" style="background-image: url({{ asset('images/backgrounds/azul4.jpg') }})">
@@ -398,6 +391,7 @@
     </section>
     <!-- /PARALLAX -->
 
+    <!-- COUNTER -->
     <section class="padding-xs alternate">
         <div class="container">
 
@@ -439,48 +433,74 @@
 
         </div>
     </section>
+    <!-- /COUNTER -->
 
-    <footer class="page-footer font-small blue pt-4" id="footer" style="background-image: url({{ asset('images/backgrounds/azul4.jpg') }})">
+    <!-- CONTACTO -->
+    <section id="seccion_contact">
+        <div id="map2" class="contact-over-map"></div>
+
         <div class="container">
-            <!-- Footer Logo -->
-                <img class="footer-logo" src="{{ asset('images/buttons/logo3.jpg') }}" alt="" />
+            <div class="contact-over-box pull-right">
 
-                <!-- Contact Address -->
-                <address>
-                    <ul class="list-unstyled">
-                        <li class="footer-sprite address">
-                            Dirección: Calle 22 # 2201 entre/ 41 y 43, municipio playa, localidad Ampliación Almendrares.
-                        </li>
-                        <li class="footer-sprite phone">
-                            Teléfono: (+53) 72067364
-                        </li>
-                        <li class="footer-sprite email">
-                            <a href="mailto:celass@mtss.gob.cu">correo-electrónico: celass@mtss.gob.cu</a>
-                        </li>
-                    </ul>
-                </address>
-                <!-- /Contact Address -->
+                <h3 class="size-20">¡Envíanos un mensaje o simplemente di  <strong><em>hola!</em></strong></h3>
+
+                <form action="" method="post" enctype="multipart/form-data">
+                    <fieldset>
+                        <input type="hidden" name="action" value="contact_send" />
+
+                        <div class="row">
+                            <div class="col-md-12 margin-bottom-20">
+                                <label for="contact:name">Nombre *</label>
+                                <input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+                            </div>
+                            <div class="col-md-12 margin-bottom-20">
+                                <label for="contact:email"Correo *</label>
+                                <input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+                            </div>
+                            <div class="col-md-12 margin-bottom-20">
+                                <label for="contact:phone">Telefono</label>
+                                <input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+                            </div>
+
+                            <div class="col-md-12 margin-bottom-20">
+                                <label for="contact:subject">Asunto *</label>
+                                <input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+                            </div>
+
+                            <div class="col-md-12 margin-bottom-20">
+                                <label for="contact:message">Mensaje *</label>
+                                <textarea required maxlength="10000" rows="6" class="form-control" name="contact[message]" id="contact:message"></textarea>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> Enviar</button>
+                        </div>
+                    </div>
+                </form>
 
             </div>
-            <!-- /col #1 -->
-            <div class="copyright">
-                <div class="container">
+        </div>
+    </section>
+    <!-- /CONTACTO -->
 
-                    &copy; Todos los derechos reservados por, CELASS
-                </div>
+    <footer class="page-footer font-small bg-blue pt-4" id="footer" style="background-image: url({{ asset('images/backgrounds/azul4.jpg') }})">
+        <!-- /col #1 -->
+        <div class="copyright">
+            <div class="container">
+                &copy; Todos los derechos reservados por, CELASS
             </div>
-
-            </div>
-
         </div>
     </footer>
 
-</div>
 <!-- /wrapper -->
 
 
 <!-- SCROLL TO TOP -->
-<a href="#" id="toTop"></a>
+<a class="text-red bg-blue" href="#" id="toTop"></a>
 
 
 <!-- PRELOADER -->
@@ -503,5 +523,37 @@
 <script type="text/javascript" src="{{asset('HTML/assets/plugins/slider.revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('HTML/assets/js/view/demo.revolution_slider.js')}}"></script>
 
+<!-- PAGELEVEL SCRIPTS -->
+<script type="text/javascript" src="{{asset('HTML/assets/js/contact.js')}}"></script>
+
+<!--
+    GMAP.JS
+    http://hpneo.github.io/gmaps/
+-->
+<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="{{asset('HTML/assets/plugins/gmaps.js')}}"></script>
+<script type="text/javascript">
+
+    jQuery(document).ready(function(){
+
+        /**
+         @BASIC GOOGLE MAP
+         **/
+        var map2 = new GMaps({
+            div: '#map2',
+            lat: -12.043333,
+            lng: -77.028333,
+            scrollwheel: false
+        });
+
+        var marker = map2.addMarker({
+            lat: -12.043333,
+            lng: -77.028333,
+            title: 'Company, Inc.'
+        });
+
+    });
+
+</script>
 </body>
 </html>
