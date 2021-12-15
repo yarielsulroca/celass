@@ -30,7 +30,7 @@ class CursoController extends Controller
     public function create()
     {
         $tipos_cursos= TipoCurso::all();
-       return view('cursos.create')->with('tipos_cursos',$tipos_cursos);
+       return view('cursos.create2')->with('tipos_cursos',$tipos_cursos);
     }
 
     /**
@@ -130,16 +130,15 @@ class CursoController extends Controller
 
             $request->validate([
                 'img' => 'required|image|max:512'
-            ]);
+            ]); // valida que sea una imagen de como maximo 512jb de tamaño
 
         else:
                $curso->img = $curso->img;
         endif;
-
-        //Guardo los datos del nuevo curso en la bace de datos Usando el metodo save()
-        if($request->get('url')):
+         if($request->get('url')):
             $curso->url= $request->get('url');
         endif;
+         //Guardo los datos del nuevo curso en la bace de datos Usando el metodo save()
         $curso->save();
         return redirect('/home');
     }
