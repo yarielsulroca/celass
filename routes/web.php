@@ -4,6 +4,7 @@ use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UsuarioController;
+use app\Http\Controllers\cdController;
 use App\Models\User;
 
 
@@ -25,4 +26,5 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('cursos', CursoController::class);
 Route::resource('usuarios', UsuarioController::class);
+Route::resource('cd', cdController::class);
 
