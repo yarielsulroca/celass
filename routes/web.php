@@ -21,7 +21,7 @@ Route::get('/contacto', [App\Http\Controllers\InicioController::class, 'contacto
 Route::get('/pruebas',[App\Http\Controllers\InicioController::class, 'pruebas'])->name('pruebas');
 
 // Rutas autenticables
-//Auth::routes();
+Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('cursos', CursoController::class);
